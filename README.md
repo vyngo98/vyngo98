@@ -85,15 +85,15 @@ Text-to-SQL · Multi-Agent Systems · LangGraph · LoRA/PEFT · RAG · Local LLM
 
 A multi-agent analytics system that converts natural-language business questions into SQL, executes queries against a real database, and generates grounded answers from the results.
 
-🤖 Built a 6-agent LangGraph workflow for planning, schema retrieval, SQL generation, execution, error repair, and result interpretation
-🔄 Implemented an automatic SQL repair loop that detects execution errors, revises failed queries, and retries with a bounded retry mechanism
-🧠 Fine-tuned TinyLlama-1.1B for Text-to-SQL using LoRA/PEFT, with local inference through Hugging Face Transformers
-🔎 Developed RAG-style schema retrieval that identifies relevant tables and follows foreign-key relationships, reducing unnecessary schema context for small LLMs
-🧩 Designed a shared typed AnalystState with LangGraph reducers, allowing agents to exchange structured intermediate results and execution history
-🛡️ Added deterministic SQL correctness guards to detect risky queries such as JOIN fan-out and incorrect aggregation before returning results
-✅ Built an automated evaluation harness using hand-verified gold answers to measure execution accuracy and identify failure points
-⚙️ Optimized local deployment of multiple models on an 8 GB GPU, including memory management and automatic fallback
-📊 Evaluation on a 24-question benchmark achieved 25% execution accuracy, revealing the fine-tuned SQL model as the primary bottleneck and providing a measurable direction for further fine-tuning
+* 🤖 Built a 6-agent LangGraph workflow for planning, schema retrieval, SQL generation, execution, error repair, and result interpretation
+* 🔄 Implemented an automatic SQL repair loop that detects execution errors, revises failed queries, and retries with a bounded retry mechanism
+* 🧠 Fine-tuned TinyLlama-1.1B for Text-to-SQL using LoRA/PEFT, with local inference through Hugging Face Transformers
+* 🔎 Developed RAG-style schema retrieval that identifies relevant tables and follows foreign-key relationships, reducing unnecessary schema context for small LLMs
+* 🧩 Designed a shared typed AnalystState with LangGraph reducers, allowing agents to exchange structured intermediate results and execution history
+* 🛡️ Added deterministic SQL correctness guards to detect risky queries such as JOIN fan-out and incorrect aggregation before returning results
+* ✅ Built an automated evaluation harness using hand-verified gold answers to measure execution accuracy and identify failure points
+* ⚙️ Optimized local deployment of multiple models on an 8 GB GPU, including memory management and automatic fallback
+* 📊 Evaluation on a 24-question benchmark achieved 25% execution accuracy, revealing the fine-tuned SQL model as the primary bottleneck and providing a measurable direction for further fine-tuning
 
 > **Focus:** Reliable Text-to-SQL, agentic workflow orchestration, small-LLM optimization, and grounded database analytics.
 
